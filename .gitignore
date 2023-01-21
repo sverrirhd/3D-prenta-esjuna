@@ -1,5 +1,6 @@
-.tif
-.blend
-.blend1
-.qgz
-.tif.aux.xml
+*.tif
+*.blend
+*.blend1
+*.qgz
+*.tif.aux.xml
+*.stl
