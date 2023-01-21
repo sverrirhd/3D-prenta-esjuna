@@ -5,14 +5,14 @@
 ![elevation map](https://github.com/sverrirhd/3D-prenta-esjuna/raw/main/images/lmi-ss.png)
 
 2. Open the .tif file in QGIS
-   1. Roughly select the boundary around the moountain in QGIS using (...)
-   2. Use the "Clip" or "Extract by Mask" tool to create a new layer that only contains the area within the boundary of the mountain.
-   3. Save the reduced model to another .tif file
-3. Open the reduced .tif file in a jupyer notebook (link here...) using the gdal package
-   1. Assuming the mountain is surrounded by a relatively flat area, further refine the clipping of the mountain by filtering all parts of the elevation map using the minimum height
-   2. You should end up with something like this: (image here)
-   3. Save this to file
-4. Open the refined model in Blender using (...)
-5. Refine the model in blender as needed. Tips:
+   1. Compute the contour lines for the mountain to better see its outline ![contour](https://github.com/sverrirhd/3D-prenta-esjuna/raw/main/images/qgis-contour.png)
+   2. Roughly select the boundary around the moountain in QGIS and draw it's outline ![outline](https://github.com/sverrirhd/3D-prenta-esjuna/raw/main/images/qgis-contour-freehand.png)
+   3. Use the "Clip" or "Extract by Mask" tool to create a new layer that only contains the area within the boundary of the mountain.![cropped with hillside visual](https://github.com/sverrirhd/3D-prenta-esjuna/blob/main/images/esjan-cropped.png)
+   4. Save the reduced model to another .tif file
+3. Open the .tif file in blender using the Blender GIS plugin
+   1. Extrude the surface directly downwards 
+   2. Cut off the bottom part of the volume with a block using a boolean modifier to subtract the bottom part of the block
+   3. You should be left with a 3D volume that looks like this ![3D volume](https://github.com/sverrirhd/3D-prenta-esjuna/raw/main/images/Blender-final.png) 
+4. Refine the model in blender as needed. Tips:
    - Scale the mountain in the X-Y plane seperately from the Z-axis and then scale the Z-axis to the desired scale to bring out the shape of the mountain, even if the elevation is exaggerated. 
    - 
